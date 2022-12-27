@@ -26,13 +26,12 @@ button:hover{
 }
 .container {
   padding: 20px;
-  width:1920px;
+  width:60%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
-.navbar-brand.index{
-  position: absolute;
+.div-index{
   top: 22.5px;
   left:50px;
 }
