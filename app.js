@@ -18,15 +18,20 @@ app.get('/',(req,res)=>{
   res.render('index')
 })
 
-app.get('/about',(req,res)=>{
-  res.render('about')
+app.get('/:title',(req,res)=>{
+  const title = req.params.title
+  res.render('show',{title:title})
 })
-app.get('/portfolio', (req, res) => {
-  res.render('portfolio');
-});
-app.get('/contact',(req,res)=>{
-  res.render('contact')
-})
+
+// app.get('/about',(req,res)=>{
+//   res.render('about')
+// })
+// app.get('/portfolio', (req, res) => {
+//   res.render('portfolio');
+// });
+// app.get('/contact',(req,res)=>{
+//   res.render('contact')
+// })
 // 啟動伺服器
 app.listen(port,()=>{
   console.log(`Express is listeing on localhost:${port} `)
